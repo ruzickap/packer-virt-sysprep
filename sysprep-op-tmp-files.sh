@@ -109,7 +109,7 @@ do
         IFS=${defifs} # Restore the default IFS and split behaviour
         # If the temp directory is not a mounted partition it must be on
         # the root file system
-        [[ "x${tmp_located_on}" = "x" ]] && tmp_located_on="/"
+        [[ "${tmp_located_on}" = "" ]] && tmp_located_on="/"
 
 
         # Recreate the temp directory under /dev/shm (on tmpfs)
