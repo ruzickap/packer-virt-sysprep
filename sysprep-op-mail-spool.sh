@@ -26,7 +26,7 @@ do
     if command -v systemctl &>/dev/null ; then
         mta_service="$(systemctl list-units --type service | grep "${mta}" | \
                        cut -d' ' -f1)"
-        if [ "x${mta_service}" != "x" ]; then
+        if [ "${mta_service}" != "" ]; then
             if systemctl is-active "${mta_service}" &>/dev/null; then
                 systemctl stop "${mta_service}"
             fi
@@ -34,7 +34,7 @@ do
     # Sys-v-init
     else
         mta_service="$(find /etc/init.d/ -iname "*${mta}*")"
-        if [ "x${mta_service}" != "x" ]; then
+        if [ "${mta_service}" != "" ]; then
             if ${mta_service} status | grep running &>/dev/null; then
                 ${mta_service} stop
             fi

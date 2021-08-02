@@ -153,7 +153,7 @@ do
             IFS=${defifs} # Restore the default IFS and split behaviour
             # If the log directory is not a mounted partition it must be on
             # the root file system
-            [[ "x${logd_located_on}" = "x" ]] && logd_located_on="/"
+            [[ "${logd_located_on}" = "" ]] && logd_located_on="/"
 
 
             # Recreate the log directory under /dev/shm (on tmpfs)
@@ -200,7 +200,7 @@ do
             # Delete all files from the on-disk log directory
             find "${logd_path}" -type f -delete
             # Recreate the /var/log/lastlog file if required
-            if [[ "${logd}" == "/var/log" ]] && [[ "x${lastlog}" != "x" ]]; then
+            if [[ "${logd}" == "/var/log" ]] && [[ "${lastlog}" != "" ]]; then
                 touch "${lastlog}"
             fi
             # Cleanup
