@@ -28,7 +28,7 @@ the guest VM be shutdown prior to use.
 - sysprep-op-dhcp-client-state: Delete any DHCP lease information
 - sysprep-op-firewall-rules: Delete custom rules and firewall customisations
 - sysprep-op-logfiles: Ensures the resultant image is devoid of log files
-- sysprep-op-machine-id: Deletes the machine-id. This ensures a unique id is
+- sysprep-op-machine-id: Deletes the machine-id. This ensures a unique ID is
   created the next time the machine is booted.
 - sysprep-op-mail-spool: Removes any mail from the local spool
 - sysprep-op-package-manager-cache: Removes cache files associated with the
