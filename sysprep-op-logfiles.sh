@@ -175,7 +175,7 @@ do
             # file system
             mkdir ${mntpnt_orig_logd}
             # Mount or bind mount in order to access the original on disk logs
-            if [ ${logd_located_on} = "/" ]; then
+            if [ "${logd_located_on}" = "/" ]; then
                 # Temp file system is a folder on the root file system
                 mount_opts="--bind"
                 # Contents will be under mount point + original path e.g
@@ -189,13 +189,13 @@ do
             fi
             # Mount the device holding the temp file system or bind mount the
             # root file system
-            mount "${mount_opts}" ${logd_located_on} ${mntpnt_orig_logd}
+            mount "${mount_opts}" "${logd_located_on}" "${mntpnt_orig_logd}"
             # The lastlog file cannot be created on demand for some reason
             # and errors occur if /var/log/lastlog is missing. So, check if
             # '/var/log/lastlog' exists and store the location so we can
             # recreate later
             if [ "${logd}" == "/var/log" ]; then
-                lastlog="$(find ${logd_path} -type f -name lastlog)"
+                lastlog="$(find "${logd_path}" -type f -name lastlog)"
             fi
             # Delete all files from the on-disk log directory
             find "${logd_path}" -type f -delete
