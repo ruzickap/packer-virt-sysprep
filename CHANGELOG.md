@@ -1,5 +1,17 @@
 # Changelog
 
+## [v0.0.2](https://github.com/ruzickap/packer-virt-sysprep/compare/v0.0.1...v0.0.2)
+
+- feat(gh-actions): add lint-pr-title [`#11`](https://github.com/ruzickap/packer-virt-sysprep/pull/11)
+- Use super-linter:slim [`#10`](https://github.com/ruzickap/packer-virt-sysprep/pull/10)
+- Upgrade GH Actions versions [`#9`](https://github.com/ruzickap/packer-virt-sysprep/pull/9)
+- Use GITHUB_TOKEN with super-linter [`#8`](https://github.com/ruzickap/packer-virt-sysprep/pull/8)
+- Replace markdown link checker by action-my-markdown-link-checker [`#7`](https://github.com/ruzickap/packer-virt-sysprep/pull/7)
+- Replace markdown linter [`#6`](https://github.com/ruzickap/packer-virt-sysprep/pull/6)
+- Add super-linter + fix related issues [`#5`](https://github.com/ruzickap/packer-virt-sysprep/pull/5)
+- Use shell-linter in latest version [`#4`](https://github.com/ruzickap/packer-virt-sysprep/pull/4)
+- Ignore CHANGELOG.md when doing markdown checks [`#3`](https://github.com/ruzickap/packer-virt-sysprep/pull/3)
+
 ## v0.0.1 (2020-05-10)
 
 - Add HWADDR+UUID network configuration cleanup script for CentOS [`#1`](https://github.com/ruzickap/packer-virt-sysprep/pull/1)
@@ -11,7 +23,6 @@
 - Fix globbing and allow SC2068 [`8daffec`](https://github.com/ruzickap/packer-virt-sysprep/commit/8daffecbfdadecb56e9ce94fee4afd0070343996)
 - Add netplan cleanup [`95d88cf`](https://github.com/ruzickap/packer-virt-sysprep/commit/95d88cfbedbd702391d95d6daeb2d83a37be77b5)
 - Fork + refactor some parts [`4e5fcd0`](https://github.com/ruzickap/packer-virt-sysprep/commit/4e5fcd00ce25c196a8b8128bc20f41614516ffa4)
-- Add HWADDR+UUID network configuration cleanup script for CentOS [`562063b`](https://github.com/ruzickap/packer-virt-sysprep/commit/562063b3174627e75317a5e18db0eb2fc37b0d31)
 - Refactor to allow rm of lease file when it does not contain lease info [`afb4e92`](https://github.com/ruzickap/packer-virt-sysprep/commit/afb4e929f338e06e1909dc7612b8b7a4b952250b)
 - Ensure the DHCP leases file is removed [`79f144c`](https://github.com/ruzickap/packer-virt-sysprep/commit/79f144c23810f85f9f11196d5af5435f6620c2e8)
 - Regenerate SSH keys: Replace rc.local script with systemd unit and script [`055c069`](https://github.com/ruzickap/packer-virt-sysprep/commit/055c069a416cb8a78538551c48314f6212d1a392)
