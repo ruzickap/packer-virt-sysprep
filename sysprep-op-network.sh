@@ -10,14 +10,14 @@
 set -o errexit
 
 network_config_locations=(
-    "/etc/sysconfig/network-scripts/ifcfg-e*"
+  "/etc/sysconfig/network-scripts/ifcfg-e*"
 )
 
 netplan_networkd_config="/etc/netplan/01-netcfg.yaml"
 netplan_networkmanager_config="/etc/netplan/01-network-manager-all.yaml"
 
 # network: Remove network-scripts/ifcfg-e* config files
-#     * /etc/sysconfig/network-scripts/ifcfg-e*
+#   * /etc/sysconfig/network-scripts/ifcfg-e*
 echo "*** Remove network-scripts/ifcfg-e* config files"
 
 # Include hidden files in glob
@@ -25,7 +25,7 @@ shopt -s nullglob
 
 # shellcheck disable=SC2068
 for network_config in ${network_config_locations[@]}; do
-    rm "${network_config}"
+  rm "${network_config}"
 done
 
 # This needs to be executed on the Ubuntu server installation (mini.iso) when installing Desktop environment using
