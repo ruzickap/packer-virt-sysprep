@@ -17,9 +17,9 @@
 set -o errexit
 
 fw_config_locations=(
-    "/etc/sysconfig/iptables"
-    "/etc/firewalld/services/*"
-    "/etc/firewalld/zones/*"
+  "/etc/sysconfig/iptables"
+  "/etc/firewalld/services/*"
+  "/etc/firewalld/zones/*"
 )
 
 # firewall-rules: Remove custom firewall rules by removing:
@@ -29,10 +29,10 @@ fw_config_locations=(
 echo "*** Removing any custom firewall rules or firewalld configuration"
 
 # If using firewalld stop the daemon/service prior to removing the config
-if command -v systemctl &>/dev/null; then
-    if systemctl is-active firewalld.service &>/dev/null; then
-        systemctl stop firewalld.service
-    fi
+if command -v systemctl &> /dev/null; then
+  if systemctl is-active firewalld.service &> /dev/null; then
+    systemctl stop firewalld.service
+  fi
 fi
 
 # Include hidden files in globs
@@ -40,9 +40,8 @@ shopt -s nullglob dotglob
 
 # Remove any custom configuration
 # shellcheck disable=SC2068
-for fw_config in ${fw_config_locations[@]}
-do
-    rm -rf "${fw_config}"
+for fw_config in ${fw_config_locations[@]}; do
+  rm -rf "${fw_config}"
 done
 
 exit 0

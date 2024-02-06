@@ -6,9 +6,9 @@
 set -o errexit
 
 lease_data_locations=(
-    "/var/lib/dhclient/*"
-    "/var/lib/dhcp/*"
-    "/var/lib/NetworkManager/*"
+  "/var/lib/dhclient/*"
+  "/var/lib/dhcp/*"
+  "/var/lib/NetworkManager/*"
 )
 
 # dhcp-client-state: Remove DHCP client release by removing:
@@ -23,7 +23,7 @@ shopt -s nullglob dotglob
 # Remove all lease files
 # shellcheck disable=SC2068
 for lease_file in ${lease_data_locations[@]}; do
-    rm -f "${lease_file}"
+  rm -f "${lease_file}"
 done
 
 exit 0
