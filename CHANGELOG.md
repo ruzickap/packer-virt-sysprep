@@ -1,5 +1,15 @@
 # Changelog
 
+## [0.1.0](https://github.com/ruzickap/packer-virt-sysprep/compare/v0.0.2...v0.1.0) (2024-07-07)
+
+
+### Features
+
+* add github defaults ([818c9bf](https://github.com/ruzickap/packer-virt-sysprep/commit/818c9bf27c379dace020b73bc311c08216177a24))
+* **gh:** add default GitHub repo files ([#15](https://github.com/ruzickap/packer-virt-sysprep/issues/15)) ([062cb57](https://github.com/ruzickap/packer-virt-sysprep/commit/062cb57bf6990939af55ff38b3431863c4889d74))
+* **gh:** add default GitHub repo files ([#16](https://github.com/ruzickap/packer-virt-sysprep/issues/16)) ([6572db0](https://github.com/ruzickap/packer-virt-sysprep/commit/6572db06af3b673221c09147201b49d9722b525e))
+* **gha:** unify GHA - renovate, megalinter, markdown, and others ([8ffc821](https://github.com/ruzickap/packer-virt-sysprep/commit/8ffc8219a5e4641f68339923cf18b3a7773de3ec))
+
 ## [v0.0.2](https://github.com/ruzickap/packer-virt-sysprep/compare/v0.0.1...v0.0.2)
 
 - feat(gh-actions): add lint-pr-title [`#11`](https://github.com/ruzickap/packer-virt-sysprep/pull/11)
